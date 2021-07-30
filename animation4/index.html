@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>CSS JS ANIMATION</h2>
+        <div class="banner" id="banner">
+            <!-- <div class="box" style="grid-row: ${x}; grid-column: 1; "></div> -->
+        </div>
+    </div>
+    <script>
+        const banner = document.getElementById("banner");
+        const boxs = document.getElementsByClassName("box");
+        for(var i = 1; i<=25; i++){
+            for (var x = 1; x < 26; x++) {
+                var duration = Math.random()*5;
+                banner.innerHTML += `<div class="box" style="grid-row: ${x}; grid-column: ${i}; animation-duration:${2+duration}s; "></div>`;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

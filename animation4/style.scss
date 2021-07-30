@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 100px;
+    h2 {
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        line-height: 100vh;
+        font-size: 10vw;
+    }
+    .banner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(25, 4vw);
+        grid-template-rows: repeat(25, 4vw);
+        // flex-direction: column;
+        .box {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            position: relative;
+            transform: scale(0) translatez(0);
+            animation: animate 0.75s ease-in-out forwards;
+            // &:nth-child(3n+1) {
+            //     animation: animate 2s ease-in-out forwards;
+            //     background-color: royalblue;
+            // }
+            // &:nth-child(3n+2) {
+            //     animation: animate 3s ease-in-out forwards;
+            //     background-color: red;
+                
+            // }
+            // &:nth-child(3n+3) {
+            //     animation: animate 4s ease-in-out forwards;
+            //     background-color: yellow;
+                
+            // }
+        }
+    }
+    @keyframes animate {
+        0% {
+            transform: scale(0) translateZ(0);
+        }
+        50% {
+            transform: scale(0.5) translateZ(300px);
+            box-shadow: 0 0 15px #fff;
+            background: url('bg.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        100% {
+            transform: scale(1) translateZ(0);
+            background: url('bg.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    }
+}

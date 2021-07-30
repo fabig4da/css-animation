@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.animation-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #999;
+  position: relative;
+}
+
+.animation-container .title {
+  width: 100%;
+  text-align: center;
+  color: #000;
+  line-height: 100vh;
+  font-size: 10vw;
+}
+
+.animation-container .barner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.animation-container .barner .block {
+  width: 5vw;
+  height: 5vh;
+  position: relative;
+  -webkit-animation: animate 0.75s ease-in-out forwards;
+          animation: animate 0.75s ease-in-out forwards;
+}
+
+.animation-container .barner .block:nth-child(even) {
+  -webkit-animation: animate 1s ease-in-out forwards;
+          animation: animate 1s ease-in-out forwards;
+}
+
+.animation-container .barner .block:nth-child(7n+3) {
+  -webkit-animation: animate 2s ease-in-out forwards;
+          animation: animate 2s ease-in-out forwards;
+}
+
+.animation-container .barner .block:nth-child(7n+7) {
+  -webkit-animation: animate 2.5s ease-in-out forwards;
+          animation: animate 2.5s ease-in-out forwards;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateY(1000px);
+            transform: scale(0) translateY(1000px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+    background: url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+    background: url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0) translateY(1000px);
+            transform: scale(0) translateY(1000px);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+    background: url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1) translateY(0px);
+            transform: scale(1) translateY(0px);
+    background: url("../img/bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h2>CSS JS ANIMATION</h2>
+        <div class="banner">
+            <div class="box"></div>
+        </div>
+    </div>
+    <script>
+        const banner = document.getElementsByClassName('banner')[0];
+        const boxs = document.getElementsByClassName('box');
+        for(x=1; x<401; x++){
+            banner.innerHTML += "<div class='box'></div>";
+            var duration = Math.random()*5;
+            // boxs[x].style.animationDelay = `${x*0.05}s`
+            boxs[x].style.animationDuration = duration+'s';
+        }
+    </script>
+    
+</body>
+</html>

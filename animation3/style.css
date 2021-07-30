@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+}
+
+.container h2 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 100vh;
+  font-size: 10vw;
+}
+
+.container .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.container .banner .box {
+  width: 5vw;
+  height: 5vh;
+  background-color: #fff;
+  position: relative;
+  -webkit-animation: animate 0.75s ease-in forwards;
+          animation: animate 0.75s ease-in forwards;
+  -webkit-transform: translateY(102vh);
+          transform: translateY(102vh);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: translateY(102vh);
+            transform: translateY(102vh);
+    background: url("./bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: url("./bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: translateY(102vh);
+            transform: translateY(102vh);
+    background: url("./bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    background: url("./bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

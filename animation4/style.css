@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #000;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-perspective: 100px;
+          perspective: 100px;
+}
+
+.container h2 {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  line-height: 100vh;
+  font-size: 10vw;
+}
+
+.container .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (4vw)[25];
+      grid-template-columns: repeat(25, 4vw);
+  -ms-grid-rows: (4vw)[25];
+      grid-template-rows: repeat(25, 4vw);
+}
+
+.container .banner .box {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: relative;
+  -webkit-transform: scale(0) translatez(0);
+          transform: scale(0) translatez(0);
+  -webkit-animation: animate 0.75s ease-in-out forwards;
+          animation: animate 0.75s ease-in-out forwards;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(0) translateZ(0);
+            transform: scale(0) translateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) translateZ(300px);
+            transform: scale(0.5) translateZ(300px);
+    -webkit-box-shadow: 0 0 15px #fff;
+            box-shadow: 0 0 15px #fff;
+    background: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+            transform: scale(1) translateZ(0);
+    background: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(0) translateZ(0);
+            transform: scale(0) translateZ(0);
+  }
+  50% {
+    -webkit-transform: scale(0.5) translateZ(300px);
+            transform: scale(0.5) translateZ(300px);
+    -webkit-box-shadow: 0 0 15px #fff;
+            box-shadow: 0 0 15px #fff;
+    background: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  100% {
+    -webkit-transform: scale(1) translateZ(0);
+            transform: scale(1) translateZ(0);
+    background: url("bg.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+}
+/*# sourceMappingURL=style.css.map */

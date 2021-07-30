@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Animation</title>
+</head>
+<body>
+    <div class="animation-container">
+        <h2 class="title">JS Animation</h2>
+        <div class="barner">
+            <div class="block"></div>
+        </div>
+    </div>
+    <script>
+        const barner = document.getElementsByClassName('barner')[0];
+        const block = document.getElementsByClassName('block');
+
+        for(var x =0; x<400; x++){
+            barner.innerHTML += "<div class='block'></div>";
+            var duration = Math.random()*5;
+            block[x].style.animationDuration = `${2+duration}s`;
+            block[x].style.animationDelay = `${duration}s`;
+        }
+    </script>
+
+    
+</body>
+</html>
